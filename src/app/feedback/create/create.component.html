@@ -1,0 +1,30 @@
+<div class="create-feedback">
+  <form class="feedback-form" (submit)="createFeedback()" [formGroup]="createFeedbackForm">
+    <div class="flex">
+      <label class="flex-40">Employee Name</label>
+      <input class="flex-60" type="text" placeholder="Employee Name" formControlName="empName" required/>
+    </div>
+    <div class="flex">
+      <label class="flex-40">Employee Id</label>
+      <input class="flex-60" type="text" placeholder="Employee Id" formControlName="empId" required/>
+    </div>
+    <div class="flex">
+      <label class="flex-40">Project</label>
+      <input class="flex-60" type="text" placeholder="Project" formControlName="project" required/>
+    </div>
+    <div class="flex">
+      <label class="flex-40">Rating</label>
+      <div class="flex-60 rating">
+        <span *ngFor="let str of star;let i = index;trackBy: index" [ngClass]="{'select': str.selected}" (click)="selectStar(i)">☆ </span>
+      </div>
+    </div>
+    <div class="flex">
+      <label class="flex-40">Comment</label>
+      <textarea class="flex-60" rows="4" placeholder="Comment" formControlName="comment"></textarea>
+    </div>
+    <div class="align-right">
+      <button type="button" (click)="navigateToList()">Cancel</button>
+      <button>Submit</button>
+    </div>
+  </form>
+</div>

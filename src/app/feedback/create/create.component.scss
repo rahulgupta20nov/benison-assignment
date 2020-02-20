@@ -1,0 +1,22 @@
+.create-feedback {
+    width: 50%;
+    margin: auto;
+}
+
+.feedback-form {
+    label {
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    .rating{
+        font-size: large;
+        cursor: pointer;
+    }
+}
+
+.align-right {
+    button {
+        margin-left: 20px;
+    }
+}

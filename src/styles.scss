@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.flex-40 {
+    width: 40%;
+    padding-right: 5px;
+}
+
+.flex-60 {
+    width: 60%;
+}
+
+.flex-25 {
+    width: 25%;
+}
+.flex-50 {
+    width: 50%;
+}
+
+.select {
+    content: "\2605";
+    left: 0;
+    color: gold;
+}

@@ -1,0 +1,19 @@
+<div class="feedback-table">
+  <table class="table">
+    <tr class="flex">
+      <th class="flex-25">Project Name</th>
+      <th class="flex-25">Rating</th>
+      <th class="flex-25">Comment</th>
+      <th class="flex-25">Actions</th>
+    </tr>
+    <tr class="flex" *ngFor="let feedback of feedbacks; let i = index;">
+      <td class="flex-25">{{feedback.project}}</td>
+      <td class="flex-25"><span *ngFor="let star of [0, 0, 0, 0, 0]; let i = index;" [ngClass]="{'select': i <= feedback.rating}">☆ </span></td>
+      <td class="flex-25">{{feedback.comment}}</td>
+      <td class="flex-25 action">
+        <button (click)="edit(i)">Edit</button>
+        <button (click)="delete(i)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
